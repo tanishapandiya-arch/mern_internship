@@ -2,22 +2,23 @@
 
 ## Description
 
-This project is a basic MERN Stack backend setup using Express.js and MongoDB Atlas. It demonstrates environment configuration, database connectivity, and a scalable project structure for future development.
+This repository contains the initial backend setup for a MERN Stack application. The project demonstrates Express.js server configuration, MongoDB Atlas integration, environment variable management, security middleware setup, and a scalable backend folder structure.
 
 ## Features
 
 * Express.js server setup
 * MongoDB Atlas connection using Mongoose
-* Environment variables using dotenv
-* Organized project structure
-* Git version control with .gitignore
-* Ready for REST API development
+* Environment variable management with dotenv
+* Security middleware integration (cors, helmet, morgan)
+* Health check API endpoint
+* Basic MVC folder structure
+* Git version control with GitHub
 
-## Project Structure
+## Folder Structure
 
+```text
 backend/
 ├── config/
-│ └── db.js
 ├── controllers/
 ├── middleware/
 ├── models/
@@ -27,6 +28,7 @@ backend/
 ├── package-lock.json
 ├── .gitignore
 └── README.md
+```
 
 ## Technologies Used
 
@@ -35,43 +37,72 @@ backend/
 * MongoDB Atlas
 * Mongoose
 * dotenv
+* cors
+* helmet
+* morgan
 
-## Environment Setup
+## Setup Instructions
 
-### 1. Install Dependencies
+### 1. Clone the Repository
 
+```bash
+git clone <repository-url>
+cd backend
+```
+
+### 2. Install Dependencies
+
+```bash
 npm install
+```
 
-### 2. Create a .env File
+### 3. Create Environment Variables
 
-Add the following variables:
+Create a `.env` file in the root directory:
 
+```env
 MONGO_URI=your_mongodb_connection_string
-
 PORT=3000
+```
 
-## Run the Application
+### 4. Start the Server
 
-Start the server:
-
+```bash
 node index.js
+```
 
-Expected Output:
+## API Endpoints
 
-Server running on port 3000
+### Health Check
 
-MongoDB Connected!
+```http
+GET /api/health
+```
 
-## API Endpoint
+### Home Route
 
+```http
 GET /
+```
 
-Response:
+## Expected Output
 
-Backend running successfully with MongoDB!
+```text
+Server running on port 3000
+MongoDB Connected!
+```
 
-## Notes
+## Status
 
-* The .env file is excluded from GitHub using .gitignore.
-* MongoDB Atlas is used as the cloud database.
-* The project structure follows common backend development practices and can be extended into a complete MERN application.
+Backend setup completed successfully with:
+
+* Express.js server
+* MongoDB Atlas integration
+* Environment variable configuration
+* Security middleware
+* Health check API
+* MVC folder structure
+* GitHub repository setup
+
+```
+```
